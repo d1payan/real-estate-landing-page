@@ -183,6 +183,8 @@ hr {
 }
 
 .btn-secondary:hover {
+    background-color: var(--text-black);
+    color: var(--text-white);
     scale: 1.03;
 }
 
@@ -501,7 +503,8 @@ nav .nav-bar {
 }
 
 @media screen and (max-width: 705px) {
-    .featured-row-1 {
+    .featured-row-1,
+    .featured-row-2 {
         margin-bottom: 5rem;
     }
 
@@ -528,5 +531,104 @@ nav .nav-bar {
     .featured-img .img-1,
     .featured-img .img-2 {
         display: none;
+    }
+}
+
+/* ========== NEWSLETTER SECTION ========== */
+
+.newsletter {
+    padding: 5rem 2rem;
+    background-color: var(--accent-color);
+    border-radius: 3rem;
+    color: var(--text-white);
+    text-align: center;
+    gap: 3.5rem;
+    width: 90%;
+}
+
+.newsletter h2 {
+    color: var(--text-white);
+    width: 70%;
+}
+
+.newsletter p {
+    width: 70%;
+}
+
+.subscribe {
+    width: 70%;
+    gap: 1.5rem;
+}
+
+.subscribe input {
+    background-color: #5654d1;
+    color: var(--text-white);
+    padding: 1.1rem 0 1.1rem 4rem;
+    flex: 1;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    outline: none;
+    background-image: url('./assets/Icons/mail.png');
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 1.5rem;
+}
+
+.subscribe input::placeholder {
+    color: var(--text-white);
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 1315px) {
+    .newsletter h2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .newsletter h2 {
+        font-size: 2.5rem;
+    }
+
+    .newsletter p {
+        width: 100%;
+    }
+
+    .subscribe {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .newsletter h2 {
+        font-size: 2rem;
+    }
+
+    .newsletter p {
+        font-size: 0.9rem;
+    }
+
+    .subscribe {
+        flex-direction: column;
+    }
+
+    .subscribe button {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .subscribe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .subscribe input {
+        font-size: 0.8rem;
+        background-size: 1.1rem;
+        background-position: 1rem;
+        padding: 1.1rem 0 1.1rem 2.5rem;
     }
 }
